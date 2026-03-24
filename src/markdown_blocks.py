@@ -42,7 +42,8 @@ def markdown_to_html_node(markdown):
     children = []
     for block in blocks:
         html_node = block_to_html_node(block)
-        chlidren.append(html_node)
+        children.append(html_node)
+    return ParentNode("div", children)
 
 def block_to_html_node(block):
     block_type = block_to_block_type(block)

@@ -8,5 +8,6 @@ def main():
         shutil.rmtree("public")
     os.mkdir("public")
     copy_static("static", "public")
+    generate_page("content/index.md", "template.html", "public/index.html")
 
 main()
